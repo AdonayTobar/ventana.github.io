@@ -6,19 +6,19 @@ const btnEditar = document.querySelector('.bg-green-500');
 //Creando un div con sus clases
 const contenedorEdicion = document.createElement('div');
 contenedorEdicion.classList.add(
-    'bg-white', 'rounded-lg', 'w-11/12', 'py-4', 'mb-4', 'mx-auto', 'md:max-w-lg', 'shadow-2xl', 'px-4', 'flex', 'flex-col', 'justify-center', 'items-center', 'text-center', 'z-50', 'absolute', 'top-1', 'right-0', 'left-0', 'z-50',  'h-96','my-0', 'hidden', 'gap-2'
+    'bg-white', 'rounded-lg', 'w-full', 'py-4', 'mb-4', 'mx-auto', 'md:max-w-screem', 'shadow-2xl', 'px-4', 'flex', 'flex-col', 'justify-center', 'items-center', 'text-center', 'z-50', 'absolute', 'top-0', 'right-0', 'left-0', 'z-50',  'h-screen','my-0', 'hidden', 'gap-2'
   );
 
 //Creando un input para editar el nombre
 const inputNombre = document.createElement('input');
-inputNombre.classList.add('custom-input','text-sm', 'font-medium', 'text-gray-400', 'mb-4' );
+inputNombre.classList.add('custom-input','text-sm', 'font-medium', 'text-gray-400', 'mb-4','p-2','border-2', 'border-gray-400', 'rounded-md' );
 inputNombre.setAttribute('type', 'text');
 inputNombre.setAttribute('placeholder', 'Nombre Completo');
 inputNombre.value = '';
 
 //Creando un select radial para el nivel
 const selectNivel = document.createElement('div');
-selectNivel.classList.add('flex', 'flex-row', 'gap-6', 'text-2xl', 'font-medium', 'text-gray-400', 'mb-4');
+selectNivel.classList.add('flex', 'flex-row', 'gap-2', 'md:gap-4', 'text-sm', 'font-medium', 'text-gray-400', 'mb-4');
 
 // Variable para guardar la selección del usuario
 let nivelSeleccionado;
@@ -32,7 +32,7 @@ for (let nivel of niveles) {
   input.type = 'radio';
   input.name = 'niveles';
   input.value = nivel;
-  input.classList.add('form-radio', 'text-indigo-600', 'h-5', 'w-5', 'px-6');
+  input.classList.add('form-radio', 'text-indigo-600', 'h-3', 'w-3', 'px-6', 'mx-1');
 
   // Agregar evento change para guardar la selección del usuario
   input.addEventListener('change', (event) => {
@@ -51,7 +51,7 @@ for (let nivel of niveles) {
 
 //Creando otro input para guardar el correo
 const inputCorreo = document.createElement('input');
-inputCorreo.classList.add('text-sm', 'font-medium', 'text-gray-400', 'mb-2','custom-input');
+inputCorreo.classList.add('text-sm', 'font-medium', 'text-gray-400', 'mb-2','p-2', 'border-2', 'border-gray-400', 'rounded-md');
 inputCorreo.setAttribute('type', 'email');
 inputCorreo.setAttribute('placeholder', 'ejemplo@gmail.com');
 inputCorreo.value = '';
@@ -60,7 +60,7 @@ let contrasena  = "";
 
 //Creando otro input para guardar la contrase;a
 const inputContrasena = document.createElement('input');
-inputContrasena.classList.add('text-sm', 'font-medium', 'text-gray-400', 'mb-2', 'custom-input', 'relative');
+inputContrasena.classList.add('text-sm', 'font-medium', 'text-gray-400', 'mb-2', 'custom-input', 'relative','p-2', 'border-2', 'border-gray-400', 'rounded-md');
 inputContrasena.setAttribute('type', 'password');
 inputContrasena.setAttribute('placeholder', 'Contraseña');
 inputContrasena.value = contrasena;
@@ -82,7 +82,7 @@ botonMostrarContrasena.addEventListener('mouseup', function() {
 
 //Creando un input para editar el numero de telefono
 const inputTelefono = document.createElement('input');
-inputTelefono.classList.add('text-sm', 'font-medium', 'text-gray-400', 'mb-2', 'custom-input');
+inputTelefono.classList.add('text-sm', 'font-medium', 'text-gray-400', 'mb-2', 'custom-input','p-2', 'border-2', 'border-gray-400', 'rounded-md');
 inputTelefono.setAttribute('type', 'tel');
 inputTelefono.setAttribute('placeholder', 'Número de teléfono');
 inputTelefono.value = '';
@@ -93,12 +93,12 @@ divBotones.classList.add('flex', 'justify-center', 'gap-6');
 
 //Creando el boton guardar cambios
 const btnGuardar = document.createElement('button');
-btnGuardar.classList.add('bg-green-500', 'text-white', 'py-2', 'px-4', 'rounded-lg', 'mt-4');
+btnGuardar.classList.add('bg-green-500', 'text-white', 'py-2', 'px-4', 'rounded-lg', 'mt-4', 'w-24');
 btnGuardar.textContent = 'Guardar';
 
 //Creando el boton cancelar cambios
 const btnCancelar = document.createElement('button');
-btnCancelar.classList.add('bg-green-500', 'text-white', 'py-2', 'px-4', 'rounded-lg', 'mt-4', 'btnCancelar');
+btnCancelar.classList.add('bg-green-500', 'text-white', 'py-2', 'px-4', 'rounded-lg', 'mt-4', 'btnCancelar', 'w-24');
 btnCancelar.textContent = 'Cancelar';
 
 // Agregar los botones al div
